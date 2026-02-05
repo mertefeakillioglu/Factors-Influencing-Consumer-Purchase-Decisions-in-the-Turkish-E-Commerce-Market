@@ -47,49 +47,51 @@ By including these additional visuals, this repository serves not only as a repl
 
 🔍 LIME Analysis Files — outputs/lime/
 
-These files contain local, case-level explanations that show how the model arrives at a prediction for a single respondent.
-They are referenced in Section 4.3 – Local Explanation and Error Analysis.
+| File                              | Explanation                                                                                               |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `lime_high_binary.png`            | Shows how positive perception signals combine to produce a high-intention prediction in binary modelling. |
+| `lime_low_binary.png`             | Shows how weak or negative perception signals produce a low-intention prediction.                         |
+| `lime_misclassified_binary.png`   | Used for error analysis to demonstrate how mixed perception signals can lead to incorrect classification. |
+| `lime_all_classes_3class.png`     | Overview of explanation patterns across Low–Mid–High intention levels.                                    |
+| `lime_class_0_3class.png`         | Detailed explanation for a Low intention respondent in 3-class modelling.                                 |
+| `lime_class_1_3class.png`         | Explanation for a Mid intention respondent showing mixed perception drivers.                              |
+| `lime_class_2_3class.png`         | Explanation for a High intention respondent in 3-class modelling.                                         |
+| `lime_all_classes_multiclass.png` | Overview of explanations across Very Low–Low–Medium–High intention levels.                                |
+| `lime_class_0_multiclass.png`     | Explanation for a Very Low intention respondent.                                                          |
+| `lime_class_1_multiclass.png`     | Explanation for a Low intention respondent.                                                               |
+| `lime_class_2_multiclass.png`     | Explanation for a Medium intention respondent.                                                            |
+| `lime_class_3_multiclass.png`     | Explanation for a High intention respondent.                                                              |
 
-File	Explanation
-lime_high_binary.png	Shows how positive perception signals combine to produce a high-intention prediction in binary modelling.
-lime_low_binary.png	Shows how weak or negative perception signals produce a low-intention prediction.
-lime_misclassified_binary.png	Used for error analysis to demonstrate how mixed perception signals can lead to incorrect classification.
-lime_all_classes_3class.png	Overview of explanation patterns across Low–Mid–High intention levels.
-lime_class_0_3class.png	Detailed explanation for a Low intention respondent in 3-class modelling.
-lime_class_1_3class.png	Explanation for a Mid intention respondent showing mixed perception drivers.
-lime_class_2_3class.png	Explanation for a High intention respondent in 3-class modelling.
-lime_all_classes_multiclass.png	Overview of explanations across Very Low–Low–Medium–High intention levels.
-lime_class_0_multiclass.png	Explanation for a Very Low intention respondent.
-lime_class_1_multiclass.png	Explanation for a Low intention respondent.
-lime_class_2_multiclass.png	Explanation for a Medium intention respondent.
-lime_class_3_multiclass.png	Explanation for a High intention respondent.
+
 🌐 SHAP Analysis Files — outputs/shap/
 
-These files contain global and class-level explainability visuals referenced in Section 4.2 – SHAP Analysis.
+| File                             | Explanation                                                            |
+| -------------------------------- | ---------------------------------------------------------------------- |
+| `shap_importance_binary.png`     | Global feature importance for binary classification.                   |
+| `shap_importance_multiclass.png` | Feature importance across four intention levels.                       |
+| `shap_importance_3class.png`     | Feature importance validation under merged class structure.            |
+| `shap_summary_binary.png`        | Distribution of feature effects pushing predictions high or low.       |
+| `shap_summary_multiclass.png`    | Distribution of feature effects across four classes.                   |
+| `shap_summary_3class.png`        | Distribution of feature effects in simplified class structure.         |
+| `shap_dependence_binary.png`     | Nonlinear relationships between key predictors and intention (binary). |
+| `shap_dependence_multiclass.png` | Interaction differences across intention levels.                       |
+| `shap_dependence_3class.png`     | Stability of nonlinear behaviour in 3-class modelling.                 |
+| `shap_per_class_multiclass.png`  | Feature dominance for each intention level.                            |
+| `shap_per_class_3class.png`      | Per-class feature dominance for Low–Mid–High grouping.                 |
+| `shap_waterfall_binary.png`      | Individual case explanation in binary model.                           |
+| `shap_waterfall_multiclass.png`  | Individual case explanation in multiclass model.                       |
+| `shap_waterfall_3class.png`      | Individual case explanation in 3-class model.                          |
 
-File	Explanation
-shap_importance_binary.png	Global feature importance for binary classification.
-shap_importance_multiclass.png	Feature importance across four intention levels.
-shap_importance_3class.png	Feature importance validation under merged class structure.
-shap_summary_binary.png	Distribution of feature effects pushing predictions high or low.
-shap_summary_multiclass.png	Distribution of feature effects across four classes.
-shap_summary_3class.png	Distribution of feature effects in simplified class structure.
-shap_dependence_binary.png	Nonlinear relationships between key predictors and intention (binary).
-shap_dependence_multiclass.png	Interaction differences across intention levels.
-shap_dependence_3class.png	Stability of nonlinear behaviour in 3-class modelling.
-shap_per_class_multiclass.png	Feature dominance for each intention level.
-shap_per_class_3class.png	Per-class feature dominance for Low–Mid–High grouping.
-shap_waterfall_binary.png	Individual case explanation in binary model.
-shap_waterfall_multiclass.png	Individual case explanation in multiclass model.
-shap_waterfall_3class.png	Individual case explanation in 3-class model.
+
 📈 Model Performance & Matrix Files — outputs/results/
 
 These files provide the numerical evidence of model performance referenced in Section 4.1 – Model Performance.
 
-File	Explanation
-binary_results.csv	Performance metrics for binary models (accuracy, F1, ROC-AUC, etc.).
-multiclass_results.csv	Performance metrics for four-class models.
-multiclass_3class_results.csv	Performance metrics for three-class validation models.
-confusion_matrices_3class.png	Confusion matrix visualisation for 3-class classification.
+| File                            | Explanation                                                          |
+| ------------------------------- | -------------------------------------------------------------------- |
+| `binary_results.csv`            | Performance metrics for binary models (accuracy, F1, ROC-AUC, etc.). |
+| `multiclass_results.csv`        | Performance metrics for four-class models.                           |
+| `multiclass_3class_results.csv` | Performance metrics for three-class validation models.               |
+| `confusion_matrices_3class.png` | Confusion matrix visualisation for 3-class classification.           |
 
 Together, these files ensure complete transparency between model evaluation, explainability outputs, and the discussion presented in the dissertation.
